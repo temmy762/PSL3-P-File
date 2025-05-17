@@ -20,8 +20,7 @@
           }
         }
       }
-    </script>
-    <style>
+    </script>    <style>
       /* Ensure section titles are visible immediately on page load */
       .section-title {
         opacity: 1 !important;
@@ -34,6 +33,26 @@
       @supports (background-clip: text) {
         h2:not(.text-black) {
           color: #000;
+        }
+      }
+      
+      /* Consistent heading container styles */
+      .heading-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+      
+      /* Make sure all section titles have consistent font size */
+      .text-3xl.md\:text-4xl {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+      }
+      
+      @media (min-width: 768px) {
+        .text-3xl.md\:text-4xl {
+          font-size: 2.25rem;
+          line-height: 2.5rem;
         }
       }
     </style>
@@ -78,9 +97,10 @@
 
         <section class="about-us">
             <div class="container">
-                <div class="about-grid">
-                    <div class="about-content">                        <h2 class="section-title">About PSL3 Productions</h2>
-                        <!-- <p class="subtitle">Elevating Events Since 2020</p> -->                        <p class="about-text">We are passionate about curating luxury Photo Booth experiences that capture unforgetable memories. Our DSLR, 360, and Digital photo booths are designed to elevate any event and create lasting impressions. Let us bring your vision to life with our top of the line photo booth production rentals.</p>
+                <div class="about-grid">                    <div class="about-content">
+                        <div class="max-w-5xl mx-auto px-4 mb-4">
+                            <h2 class="text-center text-3xl md:text-4xl font-bold mb-3 section-title" style="opacity: 1; visibility: visible;">About PSL3 Productions</h2>
+                        </div><p class="about-text">We are passionate about curating luxury Photo Booth experiences that capture unforgetable memories. Our DSLR, 360, and Digital photo booths are designed to elevate any event and create lasting impressions. Let us bring your vision to life with our top of the line photo booth production rentals.</p>
                         <p class="about-text">Book a booth from PSL3 productions today and get ready for an unforgettable experience. We offer open air style as well as inflatable enclosed photo booths giving your event a feeling of not only luxury but also an element of class. With many different packages to choose from, you won't be disappointed because our work speaks for itself!</p>
                         <div class="about-cta">
                             <a href="pages/services.html" class="btn-secondary">View Our Services</a>
@@ -90,12 +110,12 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section class="events-we-cater">
+        </section>        <section class="events-we-cater">
             <div class="container">
-                <h2 class="section-title">Events We Cater To</h2>
-                <p class="section-subtitle">Perfect for Any Occasion</p>
+                <div class="max-w-5xl mx-auto px-4 mb-4">
+                    <h2 class="text-center text-3xl md:text-4xl font-bold mb-3 section-title" style="opacity: 1; visibility: visible;">Events We Cater To</h2>
+                    <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">Perfect for Any Occasion</p>
+                </div>
                 <div class="events-grid">
                     <div class="event-card weddings">
                         <div class="event-overlay"></div>
@@ -147,10 +167,10 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section class="why-choose-us">
-            <h2 class="section-title">Why Choose Us</h2>
+        </section>        <section class="why-choose-us">
+            <div class="max-w-5xl mx-auto px-4 mb-8">
+                <h2 class="text-center text-3xl md:text-4xl font-bold mb-6 section-title" style="opacity: 1; visibility: visible;">Why Choose Us</h2>
+            </div>
             <div class="features-grid"><div class="feature">
                     <i class="fas fa-camera-retro"></i>
                     <h3>Premium Photo Booths</h3>
@@ -169,7 +189,10 @@
             </div>
         </section>        <section class="packages">
             <div class="container">
-                <h2 class="section-title">Our Photo Booth Packages</h2>                <div class="packages-grid">
+                <div class="max-w-5xl mx-auto px-4 mb-8">
+                    <h2 class="text-center text-3xl md:text-4xl font-bold mb-6 section-title" style="opacity: 1; visibility: visible;">Our Photo Booth Packages</h2>
+                </div>
+                <div class="packages-grid">
                     <div class="package-card">                        
                         <div class="package-header">
                             <h3>Open Air Digital Photo Booth</h3>
@@ -319,11 +342,11 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section class="testimonials">
+        </section>        <section class="testimonials">
             <div class="container">
-                <h2 class="section-title">What Our Clients Say</h2>
+                <div class="max-w-5xl mx-auto px-4 mb-8">
+                    <h2 class="text-center text-3xl md:text-4xl font-bold mb-6 section-title" style="opacity: 1; visibility: visible;">What Our Clients Say</h2>
+                </div>
                 <div class="testimonials-grid"><div class="testimonial-card">
                         <div class="testimonial-image">
                             <img src="assets/images/husband and wife- flora backdrop.jpeg" alt="Sarah and Mike's Wedding" loading="lazy">
@@ -353,11 +376,12 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section class="gallery-preview">
+        </section>        <section class="gallery-preview">
             <div class="container">
-                <h2 class="section-title">Recent Events</h2>                <div class="gallery-grid">
+                <div class="max-w-5xl mx-auto px-4 mb-8">
+                    <h2 class="text-center text-3xl md:text-4xl font-bold mb-6 section-title" style="opacity: 1; visibility: visible;">Recent Events</h2>
+                </div>
+                <div class="gallery-grid">
                     <div class="gallery-item">
                         <a href="pages/gallery.html">
                             <img src="assets/images/bridal shower 4x6.jpg" alt="Wedding photo booth moment" loading="lazy">
@@ -383,12 +407,12 @@
                     <a href="pages/gallery.html" class="btn-secondary">View Full Gallery</a>
                 </div>
             </div>
-        </section>
-
-        <section class="cta-section">
+        </section>        <section class="cta-section">
             <div class="container">
-                <h2 class="section-title">Ready to Make Your Event Unforgettable?</h2>
-                <p>Book your photo booth today and create lasting memories with PSL3 Productions!</p><div class="cta-buttons">
+                <div class="max-w-5xl mx-auto px-4 mb-4">
+                    <h2 class="text-center text-3xl md:text-4xl font-bold mb-3 section-title" style="opacity: 1; visibility: visible;">Ready to Make Your Event Unforgettable?</h2>
+                    <p class="text-center text-white mb-6 max-w-2xl mx-auto">Book your photo booth today and create lasting memories with PSL3 Productions!</p>
+                </div><div class="cta-buttons">
                     <a href="pages/booking.html" class="btn-primary">Inquire Today</a>
                     <a href="tel:3104626096" class="btn-secondary">Call Us</a>
                 </div>

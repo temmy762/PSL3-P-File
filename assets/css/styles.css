@@ -1308,6 +1308,13 @@ h2:not(.text-black) {
     opacity: 1; /* Make visible by default */
     transform: translateY(0);
     transition: opacity 0.8s ease, transform 0.8s ease;
+    margin-bottom: 20px;
+    font-size: 2.25rem;
+    line-height: 1.2;
+    font-weight: 700;
+    width: 100%;
+    display: block;
+    text-align: center;
 }
 
 .section-title::after {
