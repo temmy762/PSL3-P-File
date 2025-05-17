@@ -1,0 +1,39 @@
+# PSL3 Productions Website Deployment Checklist
+
+## Pre-Deployment Checklist
+- [x] All "Book Now" buttons updated to "Inquire Today" for consistent wording
+- [x] Pricing information removed from all packages
+- [x] Contact information updated with correct phone number and email
+- [x] Physical address updated to: 2260 Allesandro St, Los Angeles, CA 90039
+- [x] Map coordinates updated to match physical address
+- [x] Social media links properly set for Instagram and TikTok
+- [x] All video elements properly configured with autoplay, muted, loop attributes
+- [x] All images compressed and optimized for web
+- [x] All forms set up correctly
+
+## Upload to Hostinger Instructions
+1. Log in to your Hostinger account
+2. Navigate to the File Manager or use FTP credentials with a client like FileZilla
+3. Upload all files from the "NEW-PHOTOBOOTH" folder to the public_html directory
+   - Make sure to maintain the directory structure (assets/, pages/, etc.)
+4. Set proper file permissions:
+   - HTML, CSS, JS files: 644
+   - Images and media: 644
+   - Directories: 755
+5. Test the website after upload:
+   - Check all navigation links work correctly
+   - Verify all images and videos load properly
+   - Test contact forms functionality
+   - Test mobile responsiveness
+   - Check loading speed
+
+## Post-Deployment Tasks
+- Set up form submission handling (if not already done)
+- Connect Google Analytics (recommended)
+- Submit sitemap to Google Search Console
+- Test website on multiple devices and browsers
+
+## Notes
+- Facebook social link is currently a placeholder (#) - update when a Facebook page is created
+- Consider adding proper SSL certificate if not included with hosting
+- Regular backups are recommended after any future updates

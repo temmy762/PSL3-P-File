@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our stunning photo booth gallery - PSL3 Productions' premium event photography moments">
+    <title>Gallery - PSL3 Productions | Capturing Unforgettable Moments</title>
+    <link rel="icon" type="image/jpeg" href="../assets/images/Logo.jpeg">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/gallery.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/Logo.jpeg" alt="PSL3 Productions Logo" class="logo-img">
+                </a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">                <li><a href="../index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <!-- <li><a href="booking.html">Inquire Today</a></li> -->
+                <li><a href="contact.html">Contact</a></li>
+                <li class="cta-button"><a href="booking.html" class="btn-primary">Inquire Today</a></li>
+            </ul>
+        </nav>
+        <div class="menu-overlay"></div>
+    </header>
+
+    <main>
+        <!-- Gallery Hero Section -->
+        <section class="gallery-hero">
+            <div class="gallery-hero-content">
+                <h1>Our Photo Booth Moments</h1>
+                <p>Experience the magic and joy captured at our events</p>
+            </div>
+        </section>
+
+        <!-- Gallery Filter Section -->
+        <section class="gallery-filter">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Photos</button>
+                    <button class="filter-btn" data-filter="weddings">Weddings</button>
+                    <button class="filter-btn" data-filter="corporate">Corporate</button>
+                    <button class="filter-btn" data-filter="birthday">Birthday</button>
+                    <button class="filter-btn" data-filter="vip">VIP Events</button>
+                    <button class="filter-btn" data-filter="360">360° Photos</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Gallery Grid -->
+        <section class="gallery-section">
+            <div class="gallery-grid">
+                <!-- Gallery items will be populated by JavaScript -->
+            </div>
+        </section>        <!-- Video Showcase Section -->
+        <section class="video-showcase">
+            <div class="container">
+                <h2>Video Highlights</h2>
+                <p>Watch our photo booths in action</p>
+                <div class="video-grid">
+                    <div class="video-item">
+                        <video src="../assets/images/A3271776-141B-4ABF-AD24-01C334820F35.mov" 
+                               poster="../assets/images/360 machine.jpeg"
+                               controls
+                               muted
+                               playsinline>
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-item">
+                        <video src="../assets/images/About Us section Video.mp4"
+                               poster="../assets/images/BGK_9530.jpg"
+                               controls
+                               muted
+                               playsinline>
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-item">
+                        <video src="../assets/images/boomerang 2.mp4"
+                               poster="../assets/images/bridal shower 4x6.jpg"
+                               controls
+                               muted
+                               playsinline>
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-item">
+                        <video src="../assets/images/Video.mov"
+                               poster="../assets/images/Party-360 photo booth.jpg"
+                               controls
+                               muted
+                               playsinline>
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Make Your Event Unforgettable?</h2>
+                <p>Book your photo booth today and create lasting memories with PSL3 Productions!</p>                <div class="cta-buttons">
+                    <a href="booking.html" class="btn-primary">Inquire Today</a>
+                    <a href="tel:3104626096" class="btn-secondary">Call Us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox -->
+        <div class="lightbox">
+            <button class="lightbox-close" aria-label="Close lightbox">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="lightbox-prev" aria-label="Previous image">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <img src="" alt="" class="lightbox-image">
+            <button class="lightbox-next" aria-label="Next image">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </main>    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>            <div class="footer-social">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/psl3productions?igsh=NTc4MTIwNjQ2YQ==" aria-label="Instagram" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.tiktok.com/@psl3productions?_t=ZT-8w1iz4Ow9N4&_r=1" aria-label="TikTok" class="social-icon" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="far fa-envelope"></i> pslopez@psl3productions.com</p>
+                <p><i class="fas fa-phone"></i> (310) 462-6096</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 PSL3 Productions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/gallery.js"></script>
+</body>
+</html>

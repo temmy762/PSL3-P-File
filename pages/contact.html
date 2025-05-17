@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact PSL3 Productions for premium photo booth experiences - Get in touch for your next event">
+    <title>Contact Us - PSL3 Productions | Premium Photo Booth Services</title>
+    <link rel="icon" type="image/jpeg" href="../assets/images/Logo.jpeg">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/Logo.jpeg" alt="PSL3 Productions Logo" class="logo-img">
+                </a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">                <li><a href="../index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <!-- <li><a href="booking.html">Inquire Today</a></li> -->
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li class="cta-button"><a href="booking.html" class="btn-primary">Inquire Today</a></li>
+            </ul>
+        </nav>
+        <div class="menu-overlay"></div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="contact-hero">
+            <div class="contact-hero-content">
+                <h1>Get in Touch</h1>
+                <p>Let's create unforgettable moments together</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Info Cards -->
+                    <div class="contact-info">                        <div class="info-card">
+                            <div class="icon-container">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h3>Call Us</h3>
+                            <p>We're here to help</p>
+                            <a href="tel:3104626096" class="contact-link">(310) 462-6096</a>
+                        </div>
+                        <div class="info-card">
+                            <div class="icon-container">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3>Email Us</h3>
+                            <p>Get in touch</p>
+                            <a href="mailto:pslopez@psl3productions.com" class="contact-link">pslopez@psl3productions.com</a>
+                        </div>                        <div class="info-card">
+                            <div class="icon-container">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3>Visit Us</h3>
+                            <p>Our location</p>
+                            <address class="contact-link">2260 Allesandro St, Los Angeles, CA 90039</address>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->                    <div class="contact-form-container">                        <form id="contactForm" class="contact-form">
+                            <h2>Send us a Message</h2>
+                            <div class="form-group">
+                                <div class="input-group floating">
+                                    <input type="text" id="name" name="name" placeholder=" " required>
+                                    <label for="name">Your Name</label>
+                                </div>
+                                <div class="input-group floating">
+                                    <input type="email" id="email" name="email" placeholder=" " required>
+                                    <label for="email">Your Email</label>
+                                </div>
+                            </div>
+                            <div class="input-group floating">
+                                <input type="tel" id="phone" name="phone" placeholder=" " required>
+                                <label for="phone">Phone Number</label>
+                            </div>
+                            <div class="input-group floating">
+                                <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
+                                <label for="message">Your Message</label>
+                                <small class="textarea-hint">How can we help you?</small>
+                            </div>
+                            <div class="form-buttons">
+                                <button type="submit" class="submit-btn">
+                                    <span class="btn-text">Send Message</span>
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                            <div class="form-status" id="formStatus"></div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Map Section -->
+                <div class="map-section">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What areas do you service?</h3>
+                            <button class="toggle-btn" aria-label="Toggle answer">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>                        <div class="faq-answer">
+                            <p>We primarily service the Greater Los Angeles area from our Silver Lake studio location, but we're happy to travel to surrounding counties for your special event.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How far in advance should I book?</h3>
+                            <button class="toggle-btn" aria-label="Toggle answer">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We recommend booking at least 2-3 months in advance for peak season events (May-September) and 1-2 months for off-season events.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What's included in your packages?</h3>
+                            <button class="toggle-btn" aria-label="Toggle answer">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our packages include professional equipment, unlimited prints, digital copies, props, and a dedicated attendant. Visit our services page for detailed package information.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="booking.html">Inquire Today</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>            <div class="footer-social">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/psl3productions?igsh=NTc4MTIwNjQ2YQ==" aria-label="Instagram" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.tiktok.com/@psl3productions?_t=ZT-8w1iz4Ow9N4&_r=1" aria-label="TikTok" class="social-icon" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="far fa-envelope"></i> pslopez@psl3productions.com</p>
+                <p><i class="fas fa-phone"></i> (310) 462-6096</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 PSL3 Productions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../assets/js/contact.js"></script>
+</body>
+</html>

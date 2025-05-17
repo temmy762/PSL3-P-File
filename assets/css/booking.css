@@ -1,0 +1,631 @@
+/* Booking Page Styles */
+
+/* Header override for booking page */
+body .main-header {
+    position: relative !important; /* Force override */
+    margin-top: 0 !important;
+    top: 0;
+    transform: none !important; /* Prevent any transform animations */
+}
+
+/* Fix for any transition issues */
+body .main-header.scroll-down,
+body .main-header.scroll-up,
+body .main-header.scrolled {
+    position: relative !important;
+    transform: none !important;
+}
+
+.booking-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('../images/hero section.jpeg');
+    background-size: cover;
+    background-position: center;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 0; /* Remove top margin */
+    padding: 4rem 1rem;
+}
+
+.booking-hero-content {
+    max-width: 600px;
+}
+
+.booking-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.booking-hero p {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    opacity: 0.9;
+}
+
+/* Booking Section */
+.booking-section {
+    padding: 5rem 0;
+    background: #fff;
+}
+
+.booking-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Booking Info Sidebar */
+.booking-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.info-card h3 i {
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.info-card p {
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.info-card ul {
+    list-style-type: none;
+    margin: 0.5rem 0;
+    padding-left: 0.5rem;
+}
+
+.info-card li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.info-card li:before {
+    content: "\f058";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    position: absolute;
+    left: 0;
+    color: #000;
+}
+
+/* Inquiry Form */
+.inquiry-form-container {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inquiry-form-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.inquiry-form h2 {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    color: #000;
+}
+
+.inquiry-form p.form-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-section {
+    margin-bottom: 2rem;
+}
+
+.form-section-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #eee;
+    border-radius: 12px;
+    background: #f8f8f8;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+.input-group label {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    color: #666;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    background: transparent;
+    padding: 0 0.25rem;
+}
+
+/* Special handling for select dropdown */
+.select-group {
+    position: relative;
+}
+
+.select-group .select-label {
+    position: static;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.select-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.2em;
+    padding-right: 2.5rem;
+    cursor: pointer;
+}
+
+/* Date input styling */
+input[type="date"] {
+    color: #666;
+    cursor: pointer;
+}
+
+input[type="date"]:focus,
+input[type="date"]:valid {
+    color: #333;
+}
+
+/* Date input styling improvements */
+input[type="date"] {
+    padding: 1rem;
+    border: 2px solid #eee;
+    border-radius: 12px;
+    font-size: 1rem;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    color: #333;
+}
+
+input[type="date"]:focus {
+    outline: none;
+    border-color: #000;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Special handling for date field labels */
+.input-group.floating input[type="date"] + label {
+    transform: translateY(-1.7rem) scale(0.85);
+    background-color: white;
+    padding: 0 0.5rem;
+    color: #000;
+    font-weight: 500;
+}
+
+.date-hint {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: #666;
+    font-style: italic;
+    padding-left: 0.5rem;
+}
+
+/* Calendar icon styling */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: transparent;
+    color: #333;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Radio buttons styling */
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    background: #f8f8f8;
+    border-radius: 50px;
+    border: 2px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.checkbox-container:hover {
+    background: #f0f0f0;
+    border-color: #ddd;
+}
+
+.checkbox-container input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.checkbox-container:hover .checkmark {
+    border-color: #000;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #000;
+    border-color: #000;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-label {
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Enhanced focus states */
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus {
+    border-color: #000;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    outline: none;
+}
+
+/* Floating label animation */
+.input-group.floating input:focus + label,
+.input-group.floating textarea:focus + label,
+.input-group.floating input:not(:placeholder-shown) + label,
+.input-group.floating textarea:not(:placeholder-shown) + label {
+    transform: translateY(-1.7rem) scale(0.85);
+    background-color: white;
+    padding: 0 0.5rem;
+    color: #000;
+    font-weight: 500;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1.2rem 2rem;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: all 0.7s ease;
+    z-index: -1;
+}
+
+.submit-btn:hover:before {
+    right: 100%;
+}
+
+.submit-btn:hover {
+    background: #333;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.25);
+}
+
+.submit-btn i {
+    transition: transform 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.submit-btn:hover i {
+    transform: translateX(5px) rotate(15deg);
+}
+
+.form-status {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.form-status.success {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: #2e7d32;
+    border: 1px solid #2e7d32;
+    opacity: 1;
+    height: auto;
+}
+
+.form-status.error {
+    background-color: rgba(244, 67, 54, 0.1);
+    color: #d32f2f;
+    border: 1px solid #d32f2f;
+    opacity: 1;
+    height: auto;
+}
+
+/* Privacy notice */
+.privacy-notice {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 5rem 0;
+    background: #f8f8f8;
+}
+
+.testimonials-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.testimonial-card:before {
+    content: "\201C";
+    font-family: Georgia, serif;
+    font-size: 4rem;
+    position: absolute;
+    top: -1rem;
+    left: 1rem;
+    color: #f0f0f0;
+    z-index: 0;
+}
+
+.testimonial-text {
+    position: relative;
+    z-index: 1;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-details h4 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.author-details p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Error styling */
+.input-group.error input,
+.input-group.error textarea,
+.input-group.error select {
+    border-color: #d32f2f;
+    background-color: rgba(211, 47, 47, 0.05);
+}
+
+.error-message {
+    color: #d32f2f;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    display: block;
+    padding-left: 0.5rem;
+}
+
+.input-group.valid input,
+.input-group.valid textarea,
+.input-group.valid select {
+    border-color: #2e7d32;
+}
+
+/* Animation classes */
+.animate-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .booking-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-info {
+        order: 2;
+    }
+
+    .inquiry-form-container {
+        order: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-group {
+        grid-template-columns: 1fr;
+    }
+    
+    .inquiry-form-container {
+        padding: 2rem;
+    }
+    
+    .booking-section {
+        padding: 3rem 0;
+    }
+    
+    .checkbox-group {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .inquiry-form h2 {
+        font-size: 1.8rem;
+    }
+    
+    .inquiry-form-container {
+        padding: 1.5rem;
+    }
+}
