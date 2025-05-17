@@ -1283,10 +1283,71 @@ h2 {
     text-align: center;
     margin-bottom: 1rem;
     font-size: 2.5rem;
+    color: var(--text-color); /* Solid fallback color */
+    display: block; /* Changed from inline-block to improve layout */
+    width: 100%;
+    position: relative;
+}
+
+/* Apply gradient text effect with strong fallback */
+h2:not(.text-black) {
+    /* Base solid color - will display if gradient fails */
+    color: var(--gradient-start);
+    /* Gradient effect - will override base color if supported */
     background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+/* Section title animations and styles */
+.section-title {
+    position: relative;
+    padding-bottom: 15px;
+    visibility: visible;
+    opacity: 1; /* Make visible by default */
+    transform: translateY(0);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+}
+
+.section-title.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Add specific override for Tailwind headings to ensure they're visible */
+.text-3xl.section-title, 
+.text-4xl.section-title {
+    color: #000; /* Ensure visibility */
+    opacity: 1 !important; /* Force visibility */
+}
+
+/* Mobile specific fixes for headings */
+@media (max-width: 768px) {
+    h2, .section-title {
+        font-size: 2rem;
+        color: var(--text-color);
+        opacity: 1 !important;
+        visibility: visible !important;
+        -webkit-text-fill-color: initial; /* Reset the transparent text on mobile */
+    }
+    
+    .text-3xl.section-title, 
+    .text-4xl.section-title {
+        color: #000;
+        -webkit-text-fill-color: #000;
+    }
 }
 
 .section-subtitle {

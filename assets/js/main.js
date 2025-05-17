@@ -236,7 +236,26 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe elements with animation classes
+// Ensure all section titles are visible first (failsafe)
+document.querySelectorAll('.section-title').forEach(el => {
+    el.style.opacity = '1';
+    el.style.visibility = 'visible';
+});
+
+// Then observe elements for animation effects
 document.querySelectorAll('.feature, .section-title, .testimonial').forEach(el => {
-    observer.observe(el);
+    // Check if element is already in viewport on page load
+    const rect = el.getBoundingClientRect();
+    const isVisible = (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.bottom >= 0
+    );
+    
+    // Add animated class immediately to visible elements
+    if (isVisible) {
+        el.classList.add('animated');
+    } else {
+        // Observe elements not yet in view
+        observer.observe(el);
+    }
 });
