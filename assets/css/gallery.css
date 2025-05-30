@@ -20,16 +20,16 @@
     justify-content: center;
     text-align: center;
     color: white;
-    margin-top: 30px;
-    padding: 2rem 1rem;
+    margin-top: 0;
+    padding: 6rem 1rem 2rem;
 }
 
 @media (max-width: 768px) {
     .gallery-hero {
         min-height: calc(50vh - 70px);
         background-attachment: scroll;
-        margin-top: 40px;
-        padding: 3rem 1rem;
+        margin-top: 0;
+        padding: 5rem 1rem 3rem;
     }
 }
 

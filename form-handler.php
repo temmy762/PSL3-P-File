@@ -8,7 +8,7 @@
 
 // Configuration
 $config = [
-    'admin_email' => 'pslopez@psl3productions.com',
+    'admin_email' => 'psl3productions@gmail.com',
     'from_email' => 'no-reply@psl3productions.com',
     'subject_prefix' => 'PSL3 Productions Website: ',
     'success_page' => 'thank-you.html',
